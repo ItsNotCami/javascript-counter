@@ -57,7 +57,7 @@ body::before {
 
 /* ── Label ── */
 #label {
-  font-size: 0.65rem;
+  font-size: 1rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--muted);
@@ -130,14 +130,14 @@ body::before {
 }
 
 .btn {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
   font-family: 'Space Mono', monospace;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -145,6 +145,7 @@ body::before {
   justify-content: center;
   transition: transform 0.1s, background 0.15s, border-color 0.15s, box-shadow 0.15s, color 0.15s;
   outline: none;
+  user-select: none;
 }
 
 .btn:active {
@@ -163,13 +164,14 @@ body::before {
 }
 
 #btn-reset {
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--muted);
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border-radius: 10px;
+  user-select: none;
 }
 
 #btn-reset:hover {
@@ -198,7 +200,7 @@ body::before {
 }
 
 #step-label {
-  font-size: 0.6rem;
+  font-size: 0.85rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
@@ -210,11 +212,12 @@ body::before {
   border-radius: 6px;
   color: var(--muted);
   font-family: 'Space Mono', monospace;
-  font-size: 0.65rem;
-  padding: 4px 9px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
   cursor: pointer;
   transition: all 0.15s;
   outline: none;
+  user-select: none;
 }
 
 .step-btn:hover {
@@ -237,7 +240,7 @@ body::before {
 }
 
 #history-title {
-  font-size: 0.6rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--muted);
@@ -251,13 +254,15 @@ body::before {
 }
 
 .hist-pill {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-family: 'Space Mono', monospace;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 20px;
   border: 1px solid var(--border);
   color: var(--muted);
   animation: popIn 0.2s ease;
+  user-select: none;
+  cursor: default;
 }
 
 .hist-pill.pos {
@@ -273,19 +278,21 @@ body::before {
 /* ── Hint tastiera ── */
 #hint {
   margin-top: 20px;
-  font-size: 0.55rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
   color: var(--muted);
   text-align: center;
   opacity: 0;
   animation: fadeUp 0.6s 0.55s ease forwards;
+  user-select: none;
+  cursor: default;
 }
 
 #hint kbd {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 1px 5px;
+  padding: 2px 6px;
   font-family: 'Space Mono', monospace;
 }
 
@@ -316,4 +323,250 @@ body::before {
 @keyframes popIn {
   from { transform: scale(0.7); opacity: 0; }
   to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ── Header / Logo ── */
+#site-header {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.05s ease forwards;
+}
+
+#site-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+/* ── Footer ── */
+#site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 24px 20px;
+  background: linear-gradient(to top, rgba(10,10,15,0.98) 60%, transparent);
+  opacity: 0;
+  animation: fadeUp 0.6s 0.6s ease forwards;
+}
+
+.footer-copy,
+.footer-made {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.footer-btn:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+}
+
+/* ════════════════════════════
+   RESPONSIVE — MOBILE FIRST
+   ════════════════════════════ */
+
+/* Tablet (max 768px) */
+@media (max-width: 768px) {
+  #site-header {
+    top: 16px;
+    left: 20px;
+  }
+
+  #site-logo {
+    height: 48px;
+  }
+
+  #card {
+    padding: 36px 32px 32px;
+    gap: 28px;
+    border-radius: 16px;
+    width: 90vw;
+    max-width: 400px;
+  }
+
+  #value-wrapper {
+    width: 160px;
+    height: 90px;
+  }
+
+  #value {
+    font-size: 5.5rem;
+  }
+
+  .btn {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  #btn-reset {
+    width: 52px;
+    height: 52px;
+    font-size: 0.65rem;
+  }
+
+  #history-wrap {
+    width: 90vw;
+    max-width: 400px;
+  }
+
+  #hint {
+    font-size: 0.7rem;
+  }
+
+  #site-footer {
+    padding: 12px 16px 16px;
+    gap: 4px;
+  }
+}
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+  body {
+    justify-content: center;
+    padding: 80px 0 120px;
+  }
+
+  #site-header {
+    top: 14px;
+    left: 16px;
+  }
+
+  #site-logo {
+    height: 40px;
+  }
+
+  #label {
+    font-size: 0.85rem;
+  }
+
+  #card {
+    padding: 28px 20px 24px;
+    gap: 22px;
+    border-radius: 14px;
+    width: 92vw;
+  }
+
+  #value-wrapper {
+    width: 140px;
+    height: 80px;
+  }
+
+  #value {
+    font-size: 4.5rem;
+  }
+
+  #controls {
+    gap: 12px;
+  }
+
+  .btn {
+    width: 64px;
+    height: 64px;
+    font-size: 1.6rem;
+    border-radius: 12px;
+  }
+
+  #btn-reset {
+    width: 46px;
+    height: 46px;
+    font-size: 0.6rem;
+  }
+
+  #step-row {
+    gap: 8px;
+  }
+
+  #step-label {
+    font-size: 0.75rem;
+  }
+
+  .step-btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  #history-wrap {
+    width: 92vw;
+    margin-top: 20px;
+  }
+
+  #history-title {
+    font-size: 0.75rem;
+  }
+
+  .hist-pill {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  #hint {
+    font-size: 0.65rem;
+    padding: 0 12px;
+  }
+
+  .footer-copy,
+  .footer-made {
+    font-size: 0.7rem;
+  }
+
+  .footer-btn {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  .footer-links {
+    gap: 6px;
+  }
+}
+
+/* Mobile piccolo (max 360px) */
+@media (max-width: 360px) {
+  #value {
+    font-size: 3.8rem;
+  }
+
+  .btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+
+  #btn-reset {
+    width: 40px;
+    height: 40px;
+    font-size: 0.55rem;
+  }
 }

@@ -3,7 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counter</title>
+
+    <!-- SEO -->
+    <title>Counter App — NotCami</title>
+    <meta
+      name="description"
+      content="Una semplice e interattiva Counter App realizzata in JavaScript puro da Camilla (NotCami). Incrementa, decrementa e resetta il contatore con step personalizzabile."
+    />
+    <meta
+      name="keywords"
+      content="counter app, contatore, javascript, vanilla js, NotCami, Camilla Salvati, web app, frontend"
+    />
+    <meta name="author" content="Camilla Salvati" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://itsnotcami.github.io/counter/" />
+
+    <!-- Open Graph (social preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Counter App — NotCami" />
+    <meta
+      property="og:description"
+      content="Una semplice e interattiva Counter App realizzata in JavaScript puro. Incrementa, decrementa e resetta il contatore con step personalizzabile."
+    />
+    <meta property="og:image" content="android-chrome-512x512.png" />
+    <meta property="og:url" content="https://itsnotcami.github.io/counter/" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Counter App — NotCami" />
+    <meta
+      name="twitter:description"
+      content="Una semplice e interattiva Counter App realizzata in JavaScript puro da Camilla (NotCami)."
+    />
+    <meta name="twitter:image" content="android-chrome-512x512.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/img/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/img/android-chrome-512x512.png"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -11,7 +77,45 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Logo -->
+    <header id="site-header">
+      <img
+        src="assets/img/NotCami_logo_white.svg"
+        alt="NotCami logo"
+        id="site-logo"
+      />
+    </header>
+
     <!-- L'interfaccia viene creata dinamicamente da JavaScript -->
-    <script src="assets/js/scrips.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <p class="footer-copy">© 2025 Camilla. Tutti i diritti riservati.</p>
+      <p class="footer-made">Realizzato con ❤️ da Camilla</p>
+      <div class="footer-links">
+        <a
+          href="https://github.com/ItsNotCami"
+          target="_blank"
+          rel="noopener"
+          class="footer-btn"
+          >GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/camilla-salvati-44432b312/"
+          target="_blank"
+          rel="noopener"
+          class="footer-btn"
+          >LinkedIn</a
+        >
+        <a
+          href="https://discord.com/invite/pmD75pjj6h"
+          target="_blank"
+          rel="noopener"
+          class="footer-btn"
+          >Discord</a
+        >
+      </div>
+    </footer>
   </body>
 </html>
