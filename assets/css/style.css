@@ -336,7 +336,7 @@ body::before {
 }
 
 #site-logo {
-  height: 200px;
+  height: clamp(80px, 14vw, 200px);
   width: auto;
   display: block;
   margin-top: -20px;
@@ -402,12 +402,8 @@ body::before {
 /* Tablet (max 768px) */
 @media (max-width: 768px) {
   #site-header {
-    top: 16px;
-    left: 20px;
-  }
-
-  #site-logo {
-    height: 48px;
+    top: 0px;
+    left: 0px;
   }
 
   #card {
@@ -462,12 +458,8 @@ body::before {
   }
 
   #site-header {
-    top: 14px;
-    left: 16px;
-  }
-
-  #site-logo {
-    height: 40px;
+    top: 0px;
+    left: 0px;
   }
 
   #label {
