@@ -2,7 +2,7 @@
   "name": "Counter App — NotCami",
   "short_name": "Counter",
   "description": "Una semplice e interattiva Counter App realizzata in JavaScript puro da Camilla (NotCami).",
-  "start_url": "/",
+  "start_url": "/javascript-counter/",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#0a0a0f",

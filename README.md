@@ -57,6 +57,11 @@ counter/
 
 Su mobile, il browser mostrerà un banner **"Aggiungi alla schermata home"** per installare l'app come una PWA.
 
+## Link
+
+- 🌐 **Live:** https://itsnotcami.github.io/javascript-counter/
+- 💻 **GitHub:** https://github.com/ItsNotCami
+
 ## Requisiti tecnici
 
 - JavaScript puro (Vanilla JS), nessun framework
